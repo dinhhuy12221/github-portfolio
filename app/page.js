@@ -16,7 +16,8 @@ async function getGitProfile() {
 };
 
 async function getGitProjects() {
-  const res = await fetch(`https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`)
+  const res = await fetch(`https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`)
+  // const res = await fetch(`https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`)
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -34,7 +35,8 @@ export default async function Home() {
       <HeroSection profile={profile} />
       <GitStats />
       <Projects
-        projects={projects.items}
+        projects={projects}
+        // projects={projects.items}
         profile={profile}
       />
       <GitLanguage />

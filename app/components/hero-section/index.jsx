@@ -42,13 +42,13 @@ function HeroSection({ profile }) {
             >
               <BsLinkedin size={24} />
             </Link>
-            <Link
+            {/* <Link
               href={userData.facebook}
               target='_blank'
               className="transition-all text-teal-500 hover:scale-125 duration-300"
             >
               <FaFacebook size={24} />
-            </Link>
+            </Link> */}
             <Link
               href={userData.leetcode}
               target='_blank'
@@ -56,13 +56,13 @@ function HeroSection({ profile }) {
             >
               <SiLeetcode size={24} />
             </Link>
-            <Link
+            {/* <Link
               href={userData.twitter}
               target='_blank'
               className="transition-all text-teal-500 hover:scale-125 duration-300"
             >
               <FaTwitterSquare size={24} />
-            </Link>
+            </Link> */}
           </div>
 
           <div className="w-full justify-center flex items-center gap-3 mt-6">
