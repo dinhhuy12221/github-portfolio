@@ -1,5 +1,5 @@
 // @flow strict
-import { userData } from "../../../data/user-data";
+import { userData } from "../../data/user-data";
 import Link from "next/link";
 
 

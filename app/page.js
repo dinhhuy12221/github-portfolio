@@ -1,4 +1,4 @@
-import { userData } from "../../../data/user-data";
+import { userData } from "../data/user-data";
 import Contributions from "./components/contributions";
 import HeroSection from "./components/hero-section";
 import GitLanguage from "./components/language";
