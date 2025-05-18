@@ -9,7 +9,9 @@ import SetFavicon from "./components/SetFavicon";
 
 async function getGitProfile() {
   const res = await fetch(
-    `https://api.github.com/users/${userData.githubUser}`, { cache: "no-store" }
+    `https://api.github.com/users/${userData.githubUser}`, {
+    next: { revalidate: 0 },
+  }
   );
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -20,7 +22,9 @@ async function getGitProfile() {
 
 async function getGitProjects() {
   const res = await fetch(
-    `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`, { cache: "no-store" }
+    `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`, {
+    next: { revalidate: 0 },
+  }
   );
   // const res = await fetch(`https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`)
 
