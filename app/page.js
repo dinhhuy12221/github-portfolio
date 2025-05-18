@@ -11,8 +11,8 @@ import GitStats from "./components/stats";
 import SetFavicon from "./components/SetFavicon";
 
 export default function Home() {
-  const [profile, setProfile] = useState<any>(null);
-  const [projects, setProjects] = useState<any[]>([]);
+  const [profile, setProfile] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   // Lấy thông tin profile GitHub động mỗi lần client load
   useEffect(() => {
