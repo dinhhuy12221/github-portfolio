@@ -5,26 +5,31 @@ import GitLanguage from "./components/language";
 import Projects from "./components/projects";
 import Rank from "./components/rank";
 import GitStats from "./components/stats";
+import SetFavicon from "./components/SetFavicon";
 
 async function getGitProfile() {
-  const res = await fetch(`https://api.github.com/users/${userData.githubUser}`)
+  const res = await fetch(
+    `https://api.github.com/users/${userData.githubUser}`
+  );
   if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    throw new Error("Failed to fetch data");
   }
 
   return await res.json();
-};
+}
 
 async function getGitProjects() {
-  const res = await fetch(`https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`)
+  const res = await fetch(
+    `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`
+  );
   // const res = await fetch(`https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`)
 
   if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    throw new Error("Failed to fetch data");
   }
 
   return await res.json();
-};
+}
 
 export default async function Home() {
   const profile = await getGitProfile();
@@ -32,6 +37,8 @@ export default async function Home() {
 
   return (
     <>
+      <SetFavicon iconUrl={profile.avatar_url} />
+
       <HeroSection profile={profile} />
       <GitStats />
       <Projects
@@ -43,8 +50,8 @@ export default async function Home() {
       <Rank />
       <Contributions />
     </>
-  )
-};
+  );
+}
 
 export async function generateMetadata({ params, searchParams }, parent) {
   const profile = await getGitProfile();
@@ -53,4 +60,4 @@ export async function generateMetadata({ params, searchParams }, parent) {
     title: `GitHub Profile of ${profile.name}`,
     description: profile.description,
   };
-};
+}

@@ -21,10 +21,13 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "2.2.17",
+    "@types/node": "22.15.18",
+    "@types/react": "19.1.4",
     "autoprefixer": "^10.4.12",
     "eslint": "^8.27.0",
     "eslint-config-next": "^13.0.0",
     "postcss": "^8.4.19",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "typescript": "5.8.3"
   }
 }

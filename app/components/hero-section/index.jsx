@@ -130,15 +130,31 @@ function HeroSection({ profile }) {
                 <span className="text-gray-400">,</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
+                <span className=" text-white">languages: </span>
                 <span className="text-gray-400">{`['`}</span>
                 {
-                  userData.skills.map((skill, i) => (
+                  userData.languages.map((language, i) => (
                     <>
-                      <span className="text-cyan-400">{skill}</span>
+                      <span key={i} className="text-cyan-400">{language}</span>
                       {
-                        i !== userData.skills.length - 1 &&
-                        <span className="text-gray-400">{"', '"}</span>
+                        i !== userData.languages.length - 1 &&
+                        <span key={i} className="text-gray-400">{"', '"}</span>
+                      }
+                    </>
+                  ))
+                }
+                <span className="text-gray-400">{"'],"}</span>
+              </div>
+              <div className="ml-4 lg:ml-8 mr-2">
+                <span className=" text-white">technologies: </span>
+                <span className="text-gray-400">{`['`}</span>
+                {
+                  userData.technologies.map((technology, i) => (
+                    <>
+                      <span key={i} className="text-cyan-400">{technology}</span>
+                      {
+                        i !== userData.technologies.length - 1 &&
+                        <span key={i} className="text-gray-400">{"', '"}</span>
                       }
                     </>
                   ))

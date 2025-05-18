@@ -8,6 +8,7 @@ export const userData = {
   stackOverflow: '#',
   leetcode: "https://leetcode.com/u/B0mBusVoMY/",
   resume: "#",
-  skills: ['React', 'AngularJS', 'Redux', 'Express', 'Java', 'Python', '.NET', 'MySql', 'MongoDB', 'Docker'],
+  languages: ['Javascript', 'Typescript', 'Python', 'Java', 'C#', 'C/C++'],
+  technologies: ['React', 'Angular', 'Redux', 'NodeJS/Express', 'Java Spring Boot', 'MySQL', 'MongoDB', 'Docker'],
   timezone: '+7'
 };
