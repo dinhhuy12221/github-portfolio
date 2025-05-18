@@ -30,12 +30,10 @@ export default function Home() {
   // Lấy danh sách repos động mỗi lần profile thay đổi
   useEffect(() => {
     if (!profile) return;
+    // const res = await fetch(`https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`)
 
     fetch(
-      `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`,
-      {
-        // const res = await fetch(`https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`)
-      }
+      `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc&per_page=10`
     )
       .then((res) => {
         if (!res.ok) {
@@ -46,7 +44,7 @@ export default function Home() {
       .then((data) => setProjects(data))
       .catch(console.error);
   }, [profile]);
-
+  
   return (
     <>
       {profile && <SetFavicon iconUrl={profile.avatar_url} />}
