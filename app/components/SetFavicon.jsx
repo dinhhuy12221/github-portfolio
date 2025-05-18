@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function SetFavicon({ iconUrl }: { iconUrl: string }) {
+export default function SetFavicon({ iconUrl }) {
   useEffect(() => {
     const favicon = document.querySelector("link[rel='icon']");
     if (favicon && iconUrl) {
