@@ -1,5 +1,5 @@
 // @flow strict
-import { userData } from "@/data/user-data";
+import { userData } from "../../../data/user-data";
 import Image from "next/image";
 import GlowCard from "../helper/glow-card";
 import SectionTitle from "../helper/section-title";
