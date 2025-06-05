@@ -3,8 +3,7 @@
 import { userData } from "../../../data/user-data";
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { BsGithub, BsLinkedin, SiCodeforces } from "react-icons/bs";
 import { MdDownload } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 
@@ -62,13 +61,13 @@ function HeroSection({ profile }) {
             >
               <SiLeetcode size={24} />
             </Link>
-            {/* <Link
-              href={userData.twitter}
+            <Link
+              href={userData.codeforces}
               target='_blank'
               className="transition-all text-teal-500 hover:scale-125 duration-300"
             >
-              <FaTwitterSquare size={24} />
-            </Link> */}
+              <SiCodeforces size={24} />
+            </Link>
           </div>
 
           <div className="w-full justify-center flex items-center gap-3 mt-6">
