@@ -3,7 +3,8 @@
 import { userData } from "../../../data/user-data";
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsLinkedin, SiCodeforces } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { SiCodeforces } from "react-icons/si";
 import { MdDownload } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 
