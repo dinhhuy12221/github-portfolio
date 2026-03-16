@@ -8,7 +8,6 @@ export default function SetFavicon({ iconUrl }) {
 
     let favicon = document.querySelector("link[rel='icon']");
     
-    // Nếu chưa có thì tạo mới
     if (!favicon) {
       favicon = document.createElement("link");
       favicon.setAttribute("rel", "icon");
